@@ -203,9 +203,9 @@ This project demonstrates practical implementation of
 
 Electrical Engineering, NIT Silchar
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub: https://github.com/ritusagar225
 
-LinkedIn: https://linkedin.com/in/YOUR_PROFILE
+LinkedIn: https://www.linkedin.com/in/ritu-kumari-8b1b87257/
 
 ---
 
