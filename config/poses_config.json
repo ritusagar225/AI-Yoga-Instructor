@@ -1,0 +1,292 @@
+{
+  "poses": {
+    "mountain_pose": {
+      "display_name": "Mountain Pose (Tadasana)",
+      "description": "A basic standing pose. Stand tall with feet together, shoulders relaxed, arms at your sides, distributing weight evenly.",
+      "category": "standing",
+      "joints": {
+        "left_knee":   {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "right_knee":  {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "left_hip":    {"mean": 180.0, "std": 4.0, "tolerance": 15.0, "weight": 1.0},
+        "right_hip":   {"mean": 180.0, "std": 4.0, "tolerance": 15.0, "weight": 1.0},
+        "left_elbow":  {"mean": 180.0, "std": 5.0, "tolerance": 20.0, "weight": 0.5},
+        "right_elbow": {"mean": 180.0, "std": 5.0, "tolerance": 20.0, "weight": 0.5},
+        "spine_alignment": {"mean": 0.0, "std": 2.0, "tolerance": 8.0, "weight": 1.5},
+        "shoulder_alignment": {"mean": 0.0, "std": 2.0, "tolerance": 5.0, "weight": 1.2}
+      }
+    },
+    "tree_pose": {
+      "display_name": "Tree Pose (Vrikshasana)",
+      "description": "A standing balance pose. One leg supports the body while the other foot is pressed against the inner thigh, hands in prayer position or overhead.",
+      "category": "standing",
+      "joints": {
+        "standing_leg_knee":   {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.5},
+        "bent_leg_knee":       {"mean": 45.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.2},
+        "bent_leg_hip":        {"mean": 90.0,  "std": 10.0, "tolerance": 20.0, "weight": 1.0},
+        "left_elbow":          {"mean": 90.0,  "std": 10.0, "tolerance": 20.0, "weight": 0.5},
+        "right_elbow":         {"mean": 90.0,  "std": 10.0, "tolerance": 20.0, "weight": 0.5},
+        "spine_alignment":     {"mean": 0.0,   "std": 3.0, "tolerance": 10.0, "weight": 1.5},
+        "shoulder_alignment":  {"mean": 0.0,   "std": 2.5, "tolerance": 6.0,  "weight": 1.0}
+      }
+    },
+    "warrior_i": {
+      "display_name": "Warrior I (Virabhadrasana I)",
+      "description": "A lunging pose with hands stretched overhead. Hips squared forward.",
+      "category": "standing",
+      "joints": {
+        "front_knee":          {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "back_knee":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.2},
+        "left_shoulder":       {"mean": 165.0, "std": 8.0, "tolerance": 15.0, "weight": 1.0},
+        "right_shoulder":      {"mean": 165.0, "std": 8.0, "tolerance": 15.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 0.0,   "std": 4.0, "tolerance": 12.0, "weight": 1.5},
+        "hip_alignment":       {"mean": 0.0,   "std": 5.0, "tolerance": 12.0, "weight": 1.0}
+      }
+    },
+    "warrior_ii": {
+      "display_name": "Warrior II (Virabhadrasana II)",
+      "description": "Standing pose with arms extended horizontally, hips open, front knee bent to 90 degrees.",
+      "category": "standing",
+      "joints": {
+        "front_knee":          {"mean": 90.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5},
+        "back_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_shoulder":       {"mean": 90.0,  "std": 5.0, "tolerance": 10.0, "weight": 1.0},
+        "right_shoulder":      {"mean": 90.0,  "std": 5.0, "tolerance": 10.0, "weight": 1.0},
+        "left_elbow":          {"mean": 180.0, "std": 4.0, "tolerance": 15.0, "weight": 0.8},
+        "right_elbow":         {"mean": 180.0, "std": 4.0, "tolerance": 15.0, "weight": 0.8},
+        "spine_alignment":     {"mean": 0.0,   "std": 3.0, "tolerance": 8.0,  "weight": 1.5}
+      }
+    },
+    "warrior_iii": {
+      "display_name": "Warrior III (Virabhadrasana III)",
+      "description": "Balancing T-pose. One leg stands, while torso and back leg are horizontal.",
+      "category": "standing",
+      "joints": {
+        "standing_knee":       {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.5},
+        "back_knee":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.0},
+        "back_hip":            {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.2},
+        "spine_alignment":     {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "arms_alignment":      {"mean": 180.0, "std": 8.0, "tolerance": 20.0, "weight": 0.8}
+      }
+    },
+    "triangle_pose": {
+      "display_name": "Triangle Pose (Trikonasana)",
+      "description": "Standing pose, legs wide, torso bent to the side, one arm reaching down and the other straight up.",
+      "category": "standing",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "left_shoulder":       {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.0},
+        "right_shoulder":      {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 45.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.5}
+      }
+    },
+    "extended_side_angle": {
+      "display_name": "Extended Side Angle (Utthita Parsvakonasana)",
+      "description": "Side lunge with one arm resting on the thigh or floor, and other arm extending diagonally.",
+      "category": "standing",
+      "joints": {
+        "front_knee":          {"mean": 90.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5},
+        "back_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "ext_arm_shoulder":    {"mean": 180.0, "std": 8.0, "tolerance": 15.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 60.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.2}
+      }
+    },
+    "chair_pose": {
+      "display_name": "Chair Pose (Utkatasana)",
+      "description": "Standing squat pose. Arms raised, hips bent as if sitting on an imaginary chair.",
+      "category": "standing",
+      "joints": {
+        "left_knee":           {"mean": 100.0, "std": 8.0, "tolerance": 20.0, "weight": 1.5},
+        "right_knee":          {"mean": 100.0, "std": 8.0, "tolerance": 20.0, "weight": 1.5},
+        "left_hip":            {"mean": 105.0, "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "right_hip":           {"mean": 105.0, "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "left_shoulder":       {"mean": 150.0, "std": 10.0, "tolerance": 20.0, "weight": 1.0},
+        "right_shoulder":      {"mean": 150.0, "std": 10.0, "tolerance": 20.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 30.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5}
+      }
+    },
+    "easy_pose": {
+      "display_name": "Easy Pose (Sukhasana)",
+      "description": "Cross-legged seated meditation pose with spine straight.",
+      "category": "sitting",
+      "joints": {
+        "left_knee":           {"mean": 45.0,  "std": 10.0, "tolerance": 25.0, "weight": 0.8},
+        "right_knee":          {"mean": 45.0,  "std": 10.0, "tolerance": 25.0, "weight": 0.8},
+        "spine_alignment":     {"mean": 0.0,   "std": 2.0, "tolerance": 8.0,  "weight": 1.8},
+        "shoulder_alignment":  {"mean": 0.0,   "std": 2.0, "tolerance": 5.0,  "weight": 1.0}
+      }
+    },
+    "childs_pose": {
+      "display_name": "Child's Pose (Balasana)",
+      "description": "Resting pose. Kneel on floor, touch big toes, sit on heels, fold forward over thighs, forehead to ground.",
+      "category": "sitting",
+      "joints": {
+        "left_knee":           {"mean": 30.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.2},
+        "right_knee":          {"mean": 30.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.2},
+        "left_hip":            {"mean": 30.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.2},
+        "right_hip":           {"mean": 30.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.2},
+        "spine_alignment":     {"mean": 90.0,  "std": 10.0, "tolerance": 20.0, "weight": 1.0}
+      }
+    },
+    "butterfly_pose": {
+      "display_name": "Butterfly Pose (Baddha Konasana)",
+      "description": "Seated pose. Bend knees, bring soles of feet together, hold feet, open hips wide.",
+      "category": "sitting",
+      "joints": {
+        "left_knee":           {"mean": 40.0,  "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "right_knee":          {"mean": 40.0,  "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "left_hip":            {"mean": 45.0,  "std": 8.0, "tolerance": 20.0, "weight": 1.0},
+        "right_hip":           {"mean": 45.0,  "std": 8.0, "tolerance": 20.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 0.0,   "std": 3.0, "tolerance": 10.0, "weight": 1.5}
+      }
+    },
+    "staff_pose": {
+      "display_name": "Staff Pose (Dandasana)",
+      "description": "Seated pose, legs extended straight out in front, spine erect, arms resting at sides.",
+      "category": "sitting",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_hip":            {"mean": 90.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5},
+        "right_hip":           {"mean": 90.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5},
+        "spine_alignment":     {"mean": 0.0,   "std": 2.0, "tolerance": 8.0,  "weight": 1.8}
+      }
+    },
+    "seated_forward_bend": {
+      "display_name": "Seated Forward Bend (Paschimottanasana)",
+      "description": "Fold forward from the hips over straight legs, holding feet with hands.",
+      "category": "sitting",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_hip":            {"mean": 30.0,  "std": 10.0, "tolerance": 25.0, "weight": 1.5},
+        "right_hip":           {"mean": 30.0,  "std": 10.0, "tolerance": 25.0, "weight": 1.5},
+        "spine_alignment":     {"mean": 80.0,  "std": 10.0, "tolerance": 20.0, "weight": 1.0}
+      }
+    },
+    "cobra": {
+      "display_name": "Cobra Pose (Bhujangasana)",
+      "description": "Prone backbend. Lie on belly, press hands under shoulders, lift chest upward.",
+      "category": "backbend",
+      "joints": {
+        "left_elbow":          {"mean": 120.0, "std": 10.0, "tolerance": 25.0, "weight": 0.8},
+        "right_elbow":         {"mean": 120.0, "std": 10.0, "tolerance": 25.0, "weight": 0.8},
+        "left_knee":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.0},
+        "right_knee":          {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.0},
+        "back_inclination":    {"mean": 45.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.8}
+      }
+    },
+    "bridge": {
+      "display_name": "Bridge Pose (Setu Bandhasana)",
+      "description": "Supine backbend. Lie on back, bend knees, lift hips high towards the sky.",
+      "category": "backbend",
+      "joints": {
+        "left_knee":           {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.2},
+        "right_knee":          {"mean": 90.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.2},
+        "left_hip":            {"mean": 150.0, "std": 8.0, "tolerance": 15.0, "weight": 1.5},
+        "right_hip":           {"mean": 150.0, "std": 8.0, "tolerance": 15.0, "weight": 1.5},
+        "spine_alignment":     {"mean": -30.0, "std": 6.0, "tolerance": 15.0, "weight": 1.2}
+      }
+    },
+    "camel": {
+      "display_name": "Camel Pose (Ustrasana)",
+      "description": "Kneeling backbend. Reach hands back to touch heels, arch spine, hips square.",
+      "category": "backbend",
+      "joints": {
+        "left_knee":           {"mean": 90.0,  "std": 4.0, "tolerance": 10.0, "weight": 1.2},
+        "right_knee":          {"mean": 90.0,  "std": 4.0, "tolerance": 10.0, "weight": 1.2},
+        "left_hip":            {"mean": 180.0, "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "right_hip":           {"mean": 180.0, "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "spine_alignment":     {"mean": -45.0, "std": 10.0, "tolerance": 20.0, "weight": 1.8}
+      }
+    },
+    "wheel": {
+      "display_name": "Wheel Pose (Urdhva Dhanurasana)",
+      "description": "Full backbend arch. Hands and feet press into floor, pushing pelvis up.",
+      "category": "backbend",
+      "joints": {
+        "left_elbow":          {"mean": 165.0, "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "right_elbow":         {"mean": 165.0, "std": 8.0, "tolerance": 20.0, "weight": 1.2},
+        "left_knee":           {"mean": 110.0, "std": 10.0, "tolerance": 20.0, "weight": 1.2},
+        "right_knee":          {"mean": 110.0, "std": 10.0, "tolerance": 20.0, "weight": 1.2},
+        "left_hip":            {"mean": 155.0, "std": 8.0, "tolerance": 15.0, "weight": 1.5},
+        "right_hip":           {"mean": 155.0, "std": 8.0, "tolerance": 15.0, "weight": 1.5},
+        "spine_alignment":     {"mean": -60.0, "std": 10.0, "tolerance": 20.0, "weight": 1.8}
+      }
+    },
+    "crow_pose": {
+      "display_name": "Crow Pose (Bakasana)",
+      "description": "Arm balance pose. Knees tuck onto triceps, leaning forward to lift feet.",
+      "category": "balance",
+      "joints": {
+        "left_elbow":          {"mean": 100.0, "std": 10.0, "tolerance": 20.0, "weight": 1.5},
+        "right_elbow":         {"mean": 100.0, "std": 10.0, "tolerance": 20.0, "weight": 1.5},
+        "left_knee":           {"mean": 45.0,  "std": 10.0, "tolerance": 20.0, "weight": 1.2},
+        "right_knee":          {"mean": 45.0,  "std": 10.0, "tolerance": 20.0, "weight": 1.2},
+        "spine_alignment":     {"mean": 75.0,  "std": 8.0, "tolerance": 15.0, "weight": 1.5}
+      }
+    },
+    "boat_pose": {
+      "display_name": "Boat Pose (Navasana)",
+      "description": "Balance pose on sit bones. Torso and straight legs form a V-shape, arms horizontal.",
+      "category": "balance",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 5.0, "tolerance": 15.0, "weight": 1.2},
+        "right_knee":          {"mean": 180.0, "std": 5.0, "tolerance": 15.0, "weight": 1.2},
+        "left_hip":            {"mean": 60.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "right_hip":           {"mean": 60.0,  "std": 6.0, "tolerance": 15.0, "weight": 1.5},
+        "spine_alignment":     {"mean": 45.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5}
+      }
+    },
+    "side_plank": {
+      "display_name": "Side Plank (Vasisthasana)",
+      "description": "Lateral balance pose. Body supported on one side hand and foot, other arm high.",
+      "category": "balance",
+      "joints": {
+        "left_elbow":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "right_elbow":         {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.0},
+        "spine_alignment":     {"mean": 90.0,  "std": 4.0, "tolerance": 10.0, "weight": 1.5}
+      }
+    },
+    "downward_dog": {
+      "display_name": "Downward Facing Dog (Adho Mukha Svanasana)",
+      "description": "Inversion pose. Hands and feet press down, hips lift up, forming an inverted V-shape.",
+      "category": "inversion",
+      "joints": {
+        "left_elbow":          {"mean": 180.0, "std": 4.0, "tolerance": 12.0, "weight": 1.0},
+        "right_elbow":         {"mean": 180.0, "std": 4.0, "tolerance": 12.0, "weight": 1.0},
+        "left_knee":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "right_knee":          {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "left_shoulder":       {"mean": 180.0, "std": 5.0, "tolerance": 15.0, "weight": 1.2},
+        "right_shoulder":      {"mean": 180.0, "std": 5.0, "tolerance": 15.0, "weight": 1.2},
+        "spine_alignment":     {"mean": 60.0,  "std": 5.0, "tolerance": 12.0, "weight": 1.5}
+      }
+    },
+    "headstand": {
+      "display_name": "Headstand (Sirsasana)",
+      "description": "Full inversion. Supported on forearms and head, legs and torso aligned straight up.",
+      "category": "inversion",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_hip":            {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "right_hip":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "spine_alignment":     {"mean": 0.0,   "std": 2.0, "tolerance": 8.0,  "weight": 1.8}
+      }
+    },
+    "shoulder_stand": {
+      "display_name": "Shoulder Stand (Sarvangasana)",
+      "description": "Inversion pose. Torso and legs aligned straight up, supported on shoulders and upper back.",
+      "category": "inversion",
+      "joints": {
+        "left_knee":           {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "right_knee":          {"mean": 180.0, "std": 3.0, "tolerance": 10.0, "weight": 1.2},
+        "left_hip":            {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "right_hip":           {"mean": 180.0, "std": 4.0, "tolerance": 10.0, "weight": 1.5},
+        "spine_alignment":     {"mean": 0.0,   "std": 2.0, "tolerance": 8.0,  "weight": 1.8}
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Yoga Instructor - Production Posture Correction Dashboard</title>
+    <meta name="description" content="AI-powered real-time yoga pose detection, joint angle computation, bilateral symmetry analysis, and explainable posture correction system.">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Chart.js for real-time analytics graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-yin-yang logo-icon"></i>
+                <span class="logo-text">Prana<span>AI</span></span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="#" class="nav-item" id="btn-session-history"><i class="fa-solid fa-history"></i> Sessions</a>
+                <a href="#" class="nav-item" id="btn-docs"><i class="fa-solid fa-book-open"></i> Reference</a>
+            </nav>
+            
+            <div class="session-actions">
+                <button id="btn-start-session" class="btn btn-primary"><i class="fa-solid fa-play"></i> Start Practice</button>
+                <button id="btn-end-session" class="btn btn-danger" disabled><i class="fa-solid fa-stop"></i> End Practice</button>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Header HUD -->
+            <header class="hud-header">
+                <h1>AI Yoga Pose Detection & Posture Correction</h1>
+                <div class="header-status">
+                    <div class="status-indicator">
+                        <span class="indicator-dot" id="connection-dot"></span>
+                        <span id="connection-text">WebSocket: Disconnected</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Video Stream Canvas Card -->
+                <div class="card video-card">
+                    <div class="card-header">
+                        <div class="pose-select-wrapper">
+                            <label for="pose-dropdown"><i class="fa-solid fa-person-praying"></i> Target Pose: </label>
+                            <select id="pose-dropdown">
+                                <option value="">-- Free Mode (Auto-Detect) --</option>
+                            </select>
+                        </div>
+                        <div class="voice-mute-wrapper">
+                            <button id="btn-voice-toggle" class="btn-icon"><i class="fa-solid fa-volume-high"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="canvas-container">
+                        <video id="webcam" autoplay playsinline muted></video>
+                        <canvas id="skeleton-canvas"></canvas>
+                        
+                        <!-- State Overlay hud -->
+                        <div class="state-badge" id="hud-state">NO PERSON DETECTED</div>
+                        <div class="timer-badge" id="hud-timer">Hold: 0.0s</div>
+                    </div>
+                </div>
+
+                <!-- Real-time Metrics Card -->
+                <div class="card metrics-card">
+                    <h2>Live Performance Analysis</h2>
+                    
+                    <div class="gauges-grid">
+                        <div class="gauge-container">
+                            <div class="gauge-ring" id="gauge-overall">
+                                <div class="gauge-value" id="val-overall">0%</div>
+                            </div>
+                            <div class="gauge-label">Overall Score</div>
+                        </div>
+                        
+                        <div class="gauge-container">
+                            <div class="gauge-ring" id="gauge-stability">
+                                <div class="gauge-value" id="val-stability">0%</div>
+                            </div>
+                            <div class="gauge-label">Pose Stability</div>
+                        </div>
+
+                        <div class="gauge-container">
+                            <div class="gauge-ring" id="gauge-symmetry">
+                                <div class="gauge-value" id="val-symmetry">0%</div>
+                            </div>
+                            <div class="gauge-label">Bilateral Symmetry</div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Trend / Radar -->
+                    <div class="chart-container">
+                        <canvas id="realtime-score-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Explainable AI (XAI) Deduction Analysis -->
+                <div class="card xai-card">
+                    <h2>Explainable AI Score Attribution</h2>
+                    <div class="xai-container">
+                        <div class="xai-bars-list" id="xai-attribution-list">
+                            <div class="xai-empty">No posture errors active. Standard score: 100%.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Posture Correction Feedback -->
+                <div class="card feedback-card">
+                    <h2>Actionable Corrections</h2>
+                    <div class="feedback-list" id="feedback-tips-list">
+                        <div class="feedback-empty-state">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <p>Skeleton not detected. Please stand in full view of the camera.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal dialog for Session Summary -->
+    <div class="modal-overlay" id="summary-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Session Workout Summary</h2>
+                <button class="btn-icon" id="btn-close-modal"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="summary-modal-content">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
