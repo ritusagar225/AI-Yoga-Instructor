@@ -78,6 +78,10 @@ class YogaPoseClassifier:
         self.config_path = config_path
         self.mlp = None
         self.poses_config = {}
+
+        # Confidence thresholds
+        self.confidence_threshold = 0.55
+        self.confidence_gap = 0.08
         
         # Load configurations
         if os.path.exists(config_path):
@@ -104,15 +108,32 @@ class YogaPoseClassifier:
         if self.mlp_loaded and feature_vector is not None:
             try:
                 probs = self.mlp.predict(feature_vector)
+
                 top_indices = np.argsort(probs)[::-1][:3]
-                
-                top_3 = [(POSE_CLASSES[idx], float(probs[idx])) for idx in top_indices]
+
+                top_3 = [
+                    (POSE_CLASSES[idx], float(probs[idx]))
+                    for idx in top_indices
+                ]
+
                 pose_name = top_3[0][0]
                 confidence = top_3[0][1]
-                return pose_name, confidence, top_3
-            except Exception:
-                pass # Fallback to heuristics on error
 
+                confidence_gap = confidence - top_3[1][1]
+
+                # Reject uncertain predictions
+                if (
+                    confidence < self.confidence_threshold
+                    or confidence_gap < self.confidence_gap
+                ):
+                    return "unknown_pose", confidence, top_3
+
+                return pose_name, confidence, top_3
+
+            except Exception as e:
+                print(f"[Classifier Error] {e}")
+
+        # Fallback to heuristic classifier
         return self.classify_heuristics(features_dict)
 
     def classify_heuristics(self, features_dict):
